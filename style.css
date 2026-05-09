@@ -106,6 +106,17 @@ nav{
     font-size: 20px;
 }
 
+.download-buttons{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.download-buttons a{
+    text-decoration: none;
+}
+
 
 
 /*CATEGORIES*/
