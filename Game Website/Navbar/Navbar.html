@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gaming Website</title>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #464646;
+    color: white;
+}
+
+/* NAV */
+
+nav{
+    width: 100%;
+    background-color: #111111;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: #ff3b46;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links li a:hover{
+    color: #ff3b46;
+}
+
+.play-btn{
+    background-color: #ff3b46;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.play-btn:hover{
+    background-color: white;
+}
+
+/* BANNER */
+
+.banner{
+    width: 90%;
+    height: 500px;
+    margin: 40px auto;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.banner-content{
+    position: relative;
+    z-index: 1;
+}
+
+.banner-content h1{
+    font-size: 60px;
+}
+
+.banner-content p{
+    font-size: 20px;
+}
+
+
+        .categories-section {
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .categories-title {
+            font-size: 20px;    
+            color: #ffffff;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .cat-card {
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            border-bottom: 3px solid #ff3b46;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cat-card:hover { background-color: #222; }
+
+
+/* DOWNLOAD BUTTON */
+
+.banner-btn{
+    background-color: #ff3b46;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.banner-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+/* GAMES */
+
+.games-section{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.games-section h2{
+    margin: 30px 0 20px;
+    font-size: 30px;
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.game-card{
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.game-card:hover{
+    transform: scale(1.05);
+}
+
+.game-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-card h3{
+    padding: 10px;
+}
+
+.game-card button{
+    margin: 0 10px 15px;
+    padding: 10px;
+    border: none;
+    background-color: #ff3b46;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-card button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    border-top: 2px solid #ff3b46;
+}
+
+.footer a{
+    color: #ff3b46;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: red;
+}
+
+.updates-section{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.updates-section h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.updates-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.update-card{
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ff3b46;
+    transition: 0.3s;
+}
+
+.update-card:hover{
+    transform: scale(1.03);
+}
+
+.update-card h3{
+    margin-bottom: 10px;
+    color: #ff3b46;
+}
+
+.update-card p{
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">Games</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#">Report</a></li>
+    </ul>
+
+    <a href="#" class="play-btn">Play Now</a>
+
+</nav>
+
+
+<div class="main-content">
+        <section class="categories-section">
+            <h2 class="categories-title">Game Categories</h2>
+            <div class="categories-grid">
+                <div class="cat-card">Racing Game</div>
+                <div class="cat-card">Shooting Game</div>
+                <div class="cat-card">Zombie Game</div>
+                <div class="cat-card">Adventure Game</div>
+            </div>
+</section>
+
+
+<!-- BANNER -->
+
+<section class="banner">
+
+    <video autoplay muted loop>
+        <source src="car.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="banner-content">
+        <h1>Featured Game</h1>
+        <p>Play the newest game with your friends for free.</p>
+
+        <a href="#" class="banner-btn">Download</a>
+    </div>
+
+</section>
+
+
+
+
+
+<!-- UPDATES & NEWS -->
+
+<section class="updates-section" id="updates">
+
+    <h2>Updates & News</h2>
+
+    <div class="updates-container">
+
+        <div class="update-card">
+            <h3>New Racing Game Released</h3>
+            <p>We added a new high-speed racing game with better graphics.</p>
+        </div>
+
+        <div class="update-card">
+            <h3>Zombie Game Update</h3>
+            <p>New levels added with harder enemies and better rewards.</p>
+        </div>
+
+        <div class="update-card">
+            <h3>Server Maintenance</h3>
+            <p>We improved game loading speed and fixed bugs.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- GAMES -->
+
+<section class="games-section">
+
+    <h2>Popular Games</h2>
+
+    <div class="game-container">
+
+        <div class="game-card">
+            <img src="https://cdn2.y8.com/cloudimage/386503/file/w380h285_retina_webp-b5344516148fea699a754764f5012a8a.webp">
+            <h3>Racing Game</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://i.ytimg.com/vi/OIayUHRXKqY/hqdefault.jpg">
+            <h3>Shooting Game</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://cdn2.y8.com/cloudimage/399883/file/w380h285_webp-3d557ba67e9a6f2bfbfd128546780abc.webp">
+            <h3>Zombie Game</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://cdn2.y8.com/cloudimage/397865/file/w380h285_retina_webp-1c359cf871da871c36a315f06ce75d62.webp">
+            <h3>Adventure Game</h3>
+            <button>Play Now</button>
+        </div>
+
+    </div>
+
+    <h2>All Games</h2>
+
+    <div class="game-container">
+
+        <div class="game-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTkenz31Dk1YArLLtNUzpjRi-XxXLlG5TI1A&s">
+            <h3>Bartender: The Right Mix</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://www3.minijuegosgratis.com/v3/games/thumbnails/16925_1.jpg">
+            <h3>Bad Ice-Cream</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://play-lh.googleusercontent.com/6WaIRzKEOD-5KamzsJ28qrzUcRTJcbiQdpwGxp58FNRyXyKEGJNAdesA7-IeJPfbW78">
+            <h3>Wack Your Ex</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7FcyoICIUrssWSsG5OiMK9wkiA-l2zwJ9Kw&s">
+            <h3>Fire Boy & Water Girl</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://i.ytimg.com/vi/uf9Q9y7tDgY/maxresdefault.jpg">
+            <h3>Sparkle Princess Dress Up</h3>
+            <button>Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <img src="https://i.ytimg.com/vi/uf9Q9y7tDgY/maxresdefault.jpg">
+            <h3>Sparkle Princess Dress Up</h3>
+            <button>Play Now</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    <p>© 2026 My Game | All Rights Reserved</p>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+
+</body>
+</html>
